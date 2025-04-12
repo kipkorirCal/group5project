@@ -23,10 +23,10 @@ launch_ngrok() {
   php -S 127.0.0.1:3333 > /dev/null 2>&1 &
   sleep 2
   echo "[*] Starting Ngrok tunnel..."
-  ngrok http 3333 > /dev/null 2>&1 &
+  /usr/local/bin/ngrok http 3333 > /dev/null 2>&1 &
   sleep 5
   echo "[+] Share this URL with your training participant:"
-  curl -s http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-z]*\.ngrok.io'
+  curl -s http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-zA-Z.-]*\.ngrok[-a-z]*\.app'
 }
 
 start_template() {
